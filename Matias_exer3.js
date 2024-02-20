@@ -100,3 +100,16 @@ function storePassword(name, string1, string2)
 
     return person;
 }
+
+const loginForm = document.getElementById("login-form")
+const loginButton = document.getElementById("login-form-submit")
+
+loginButton.addEventListener("click", (e) =>{
+    e.preventDefault();
+    const name= loginForm.uname.value;
+    const string1= loginForm.pw1.value;
+    const string2= loginForm.pw2.value;
+
+    var toPrint=storePassword(name, string1, string2);
+    alert(toPrint);
+})
